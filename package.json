@@ -1,7 +1,7 @@
 {
   "name": "ember-tailwind-preset",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.12",
+  "description": "Ember configuration preset for Tailwind CSS",
   "keywords": [
     "ember-addon"
   ],
@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.26.10",
-    "ember-cli-htmlbars": "^5.7.2"
+    "ember-cli-htmlbars": "^5.7.2",
+    "tailwindcss": "latest"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
