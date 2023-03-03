@@ -1,13 +1,20 @@
 {
   "name": "ember-tailwind-preset",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "Ember configuration preset for Tailwind CSS",
   "keywords": [
-    "ember-addon"
+    "ember-addon", "tailwind"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexeipanov/ember-tailwind-preset.git"
+  },
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Alexei Panov",
+    "email": "a8panov@gmail.com"
+  },
+
   "directories": {
     "doc": "doc",
     "test": "tests"

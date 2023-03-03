@@ -1,7 +1,7 @@
 ember-tailwind-preset
 ==============================================================================
 
-[Short description of the addon.]
+Ember configuration preset for Tailwind CSS
 
 
 Compatibility
@@ -23,7 +23,7 @@ ember install ember-tailwind-preset
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+This plugin makes available TailwindCSS usage in your Ember.js project according to this [guide](https://tailwindcss.com/docs/installation/using-postcss)
 
 
 Contributing
