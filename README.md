@@ -3,6 +3,8 @@ ember-tailwind-preset
 
 Ember configuration preset for Tailwind CSS
 
+[![Node.js Package](https://github.com/alexeipanov/ember-tailwind-preset/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/alexeipanov/ember-tailwind-preset/actions/workflows/npm-publish.yml)
+
 
 Compatibility
 ------------------------------------------------------------------------------
