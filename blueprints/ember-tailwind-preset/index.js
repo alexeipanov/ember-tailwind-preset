@@ -6,8 +6,10 @@ const appImport = `${appClass} = require('ember-cli/lib/broccoli/ember-app')`;
 const addonImport = `${addonClass} = require('ember-cli/lib/broccoli/ember-addon')`;
 const appTemplateFiles =
   "['./app/templates/**/*.hbs', './app/components/**/*.hbs']";
+
 const addonTemplateFiles =
   "['./tests/dummy/app/templates/**/*.hbs', './tests/dummy/app/components/**/*.hbs']";
+
 const postcssOptions = `postcssOptions: {
       compile: {
         plugins: [
@@ -22,6 +24,12 @@ const postcssOptions = `postcssOptions: {
       }
     }`;
 
+const tailwind = `
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+`;
+
 module.exports = {
   description: '',
 
@@ -32,6 +40,7 @@ module.exports = {
 
     if (this.project.isEmberCLIAddon()) {
       projectOptions = {
+        tailwind,
         postcssOptions,
         class: addonClass,
         import: addonImport,
@@ -39,6 +48,7 @@ module.exports = {
       };
     } else {
       projectOptions = {
+        tailwind,
         postcssOptions,
         class: appClass,
         import: appImport,
@@ -51,14 +61,14 @@ module.exports = {
   },
 
   afterInstall() {
-    this.addAddonToProject({
-      name: 'ember-cli-postcss',
-      target: 'latest',
-    });
-
     return this.addPackagesToProject([
       { name: 'tailwindcss', target: 'latest' },
       { name: 'autoprefixer', target: 'latest' },
-    ]);
+    ]).then(() =>
+      this.addAddonToProject({
+        name: 'ember-cli-postcss',
+        target: 'latest',
+      })
+    );
   },
 };
