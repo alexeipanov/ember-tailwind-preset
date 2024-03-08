@@ -24,11 +24,9 @@ const postcssOptions = `postcssOptions: {
       }
     }`;
 
-const tailwind = `
-@tailwind base;
+const tailwind = `@tailwind base;
 @tailwind components;
-@tailwind utilities;
-`;
+@tailwind utilities;`;
 
 module.exports = {
   description: '',
@@ -40,7 +38,6 @@ module.exports = {
 
     if (this.project.isEmberCLIAddon()) {
       projectOptions = {
-        tailwind,
         postcssOptions,
         class: addonClass,
         import: addonImport,
@@ -48,7 +45,6 @@ module.exports = {
       };
     } else {
       projectOptions = {
-        tailwind,
         postcssOptions,
         class: appClass,
         import: appImport,
@@ -64,11 +60,13 @@ module.exports = {
     return this.addPackagesToProject([
       { name: 'tailwindcss', target: 'latest' },
       { name: 'autoprefixer', target: 'latest' },
-    ]).then(() =>
-      this.addAddonToProject({
-        name: 'ember-cli-postcss',
-        target: 'latest',
-      })
-    );
+    ])
+      .then(() =>
+        this.addAddonToProject({
+          name: 'ember-cli-postcss',
+          target: 'latest',
+        })
+      )
+      .then(() => this.insertIntoFile('app/styles/app.css', tailwind));
   },
 };
