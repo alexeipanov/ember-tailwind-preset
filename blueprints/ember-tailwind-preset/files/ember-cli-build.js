@@ -1,6 +1,6 @@
 'use strict';
 
-<%= projectOptions.import %>
+const <%= projectOptions.import %>;
 
 module.exports = function (defaults) {
   let app = new <%= projectOptions.class %>(defaults, {
