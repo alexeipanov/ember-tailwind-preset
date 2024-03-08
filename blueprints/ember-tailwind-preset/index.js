@@ -51,9 +51,14 @@ module.exports = {
   },
 
   afterInstall() {
-    return this.addAddonToProject({
+    this.addAddonToProject({
       name: 'ember-cli-postcss',
       target: 'latest',
     });
+
+    return this.addPackagesToProject([
+      { name: 'tailwindcss', target: 'latest' },
+      { name: 'autoprefixer', target: 'latest' },
+    ]);
   },
 };
