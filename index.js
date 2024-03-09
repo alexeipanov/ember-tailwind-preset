@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-tailwind-preset',
+  name: require('./package').name,
 };

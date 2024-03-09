@@ -65,7 +65,7 @@ module.exports = {
         this.addAddonToProject({
           name: 'ember-cli-postcss',
           target: 'latest',
-        })
+        }),
       )
       .then(() => {
         let cssPath = 'app/styles/app.css';
