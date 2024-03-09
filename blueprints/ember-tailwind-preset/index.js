@@ -67,6 +67,13 @@ module.exports = {
           target: 'latest',
         })
       )
-      .then(() => this.insertIntoFile('app/styles/app.css', tailwind));
+      .then(() => {
+        let cssPath = 'app/styles/app.css';
+        if (this.project.isEmberCLIAddon()) {
+          cssPath = 'tests/dummy/' + cssPath;
+        }
+
+        this.insertIntoFile(cssPath, tailwind);
+      });
   },
 };
