@@ -2,6 +2,9 @@
 /dist/
 /tmp/
 
+# packages
+/.pnpm-store
+
 # misc
 /.editorconfig
 /.ember-cli
