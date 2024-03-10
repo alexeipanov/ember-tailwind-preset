@@ -10,6 +10,7 @@ const appTemplateFiles =
 const addonTemplateFiles =
   "['./tests/dummy/app/templates/**/*.hbs', './tests/dummy/app/components/**/*.hbs']";
 
+/* eslint-disable no-useless-escape */
 const postcssOptions = `postcssOptions: {
       compile: {
         cacheInclude: [/.*\.(css|hbs)$/, /.tailwind\.config\.js$/],
@@ -24,10 +25,11 @@ const postcssOptions = `postcssOptions: {
         ]
       }
     }`;
-
+/* eslint-enable no-useless-escape */
 const tailwind = `@tailwind base;
 @tailwind components;
-@tailwind utilities;`;
+@tailwind utilities;
+`;
 
 module.exports = {
   description: '',
@@ -74,7 +76,7 @@ module.exports = {
           cssPath = 'tests/dummy/' + cssPath;
         }
 
-        this.insertIntoFile(cssPath, tailwind);
+        return this.insertIntoFile(cssPath, tailwind);
       });
   },
 };
