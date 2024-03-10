@@ -12,6 +12,7 @@ const addonTemplateFiles =
 
 const postcssOptions = `postcssOptions: {
       compile: {
+        cacheInclude: [/.*\.(css|hbs)$/, /.tailwind\.config\.js$/],
         plugins: [
           {
             module: require('postcss-import'),
