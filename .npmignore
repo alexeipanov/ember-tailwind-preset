@@ -16,6 +16,7 @@
 /.github/
 /.gitignore
 /.npmrc
+/.pnpm-store
 /.prettierignore
 /.prettierrc.js
 /.stylelintignore
