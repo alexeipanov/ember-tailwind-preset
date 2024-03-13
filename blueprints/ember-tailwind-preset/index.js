@@ -8,7 +8,7 @@ const appTemplateFiles =
   "['./app/templates/**/*.hbs', './app/components/**/*.hbs']";
 
 const addonTemplateFiles =
-  "['./tests/dummy/app/templates/**/*.hbs', './tests/dummy/app/components/**/*.hbs']";
+  "['./addon/components/**/*.hbs', './tests/dummy/app/templates/**/*.hbs', './tests/dummy/app/components/**/*.hbs']";
 
 /* eslint-disable no-useless-escape */
 const postcssOptions = `postcssOptions: {
