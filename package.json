@@ -1,6 +1,6 @@
 {
   "name": "ember-tailwind-preset",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Ember configuration preset for TailwindCSS.",
   "keywords": [
     "ember-addon",
