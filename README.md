@@ -21,7 +21,16 @@ ember install ember-tailwind-preset
 
 ## Usage
 
-This plugin makes available TailwindCSS usage in your Ember.js project according to this official guide with PostCSS [guide](https://tailwindcss.com/docs/installation/using-postcss)
+This plugin makes available TailwindCSS usage in your Ember.js project according to this official guide with PostCSS [guide](https://tailwindcss.com/docs/installation/using-postcss):
+:white_check_mark: installs ember-cli-postcss addon;
+:white_check_mark: installs tailwindcss, autoprefixer packages;
+:white_check_mark: adds Tailwind directives to the main css file (app/styles/app.css or tests/dummy/app/styles/app.css);
+:white_check_mark: creates tailwind.config.js and postcss.config.js files;
+:white_check_mark: adds postcss options in the ember-cli-build.js file;
+:white_check_mark: updates .eslintrc.js and .stylelintrc.js files.
+
+
+
 
 
 ## Contributing
